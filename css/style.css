@@ -45,6 +45,10 @@ h2{
     width:100%;
     font-size: 1em;
     margin-bottom:8px;
+     -webkit-animation: fadein 1s ease 0s forwards;
+   animation: fadein 1s ease 0s forwards;
+   animation-fill-mode: both !important;
+   visibility: visible !important;
     
 
 }
@@ -67,6 +71,7 @@ h2{
 }
 
 ul{
+
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-padding-start: 0px;
@@ -84,5 +89,33 @@ ul{
     background-color:#2B2B2B;
     border-radius: 5%;
     color:whitesmoke;
+    -webkit-animation: fadein 1s ease 0s forwards;
+   animation: fadein 1s ease 0s forwards;
+   animation-fill-mode: both !important;
+   visibility: visible !important;
+  
+    
     }
+@-webkit-keyframes fadein
+{
+   0%
+   {
+       opacity: 0;
+   }
+   100%
+   {
+       opacity: 1;
+   }
+}
+@keyframes fadein
+{
+   0%
+   {
+       opacity: 0;
+   }
+   100%
+   {
+       opacity: 1;
+   }
+}
 
