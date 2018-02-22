@@ -6,6 +6,7 @@ const deleteAllButton = document.getElementById('deleteAllButton');
 
 
 
+// ger entertangenten funktion
 input.addEventListener('keydown', function handleKeydown(e) {
     var text = input.value;
 
@@ -20,14 +21,9 @@ input.addEventListener('keydown', function handleKeydown(e) {
       });
 
 
-//lägger till en rad todo i att göra listan
-
-    
+//lägger till en rad todo i att göra listan   
 addButton.addEventListener('click', addList);
-//if(input.value =''){
-//    
-//     alert('WRITE SOMETHING');
-//      }else{
+
 function addList() {
     const li = document.createElement('li')
     li.id = "items";
@@ -50,25 +46,14 @@ function addList() {
     input.value = '';
   
 
-    
+    //raderar i ongoing
 deleteButton.addEventListener('click', deleteTodo);
-
 function deleteTodo() {
     onGoing.removeChild(li);
     onGoing.removeChild(deleteButton);
     onGoing.removeChild(doneButton);
 
 }
-
-
-deleteAllButton.addEventListener('click', deleteAll)
-    
-    function deleteAll () {
-    onGoing.innerHTML = '';
-    finished.innerHTML = '';
-
-}
-
 
 //flyttar raden från att göra listan till har gjort listan
 doneButton.addEventListener('click', moveToDone);
@@ -81,7 +66,7 @@ doneButton.addEventListener('click', moveToDone);
     finished.appendChild(deleteButton);
 }
 
-    //      raderar listan och knappen när jag trycker på delete
+    // raderar i donelistan och knappen när jag trycker på delete
     deleteButton.addEventListener('click', deleteDoneList);
     
     function deleteDoneList(){
@@ -89,6 +74,14 @@ doneButton.addEventListener('click', moveToDone);
         finished.removeChild(deleteButton);
 
 } 
+    
+deleteAllButton.addEventListener('click', deleteAll)
+    
+    function deleteAll () {
+    onGoing.innerHTML = '';
+    finished.innerHTML = '';
+
+}
     
 }// STÄNGER ADDLIST FUNKTIONEN
         

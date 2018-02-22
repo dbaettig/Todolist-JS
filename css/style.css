@@ -1,11 +1,13 @@
 
 .main{
     text-align: center;
+    margin-bottom:50px;
 }
-.search{
-    text-align: center;
 
-    
+.search{
+    justify-content: center;
+    height:100%;
+    display: flex;
 }
 
 .content{
@@ -27,48 +29,102 @@ h1{
 h2{
     font-family: 'Amatic SC', cursive;
     font-size: 2.5em;
+  }  
+    
+#input{
+    width:300px;
+    height:30px;
+    margin-right:10px;
+    font-size: 1em;
+    outline-width:thin;
+    outline-color: black;
+
 }
 #addButton{
- border:#3ABA14 solid 3px;
+   border:#3ABA14 solid 3px;
     height:35px;
     width:100px;
+    padding:0px;
+    outline: none;
     font-size: 1em;
     font-family: 'Julius Sans One', sans-serif;
-  
-     
+        -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
+
+    
 }
+#addButton:hover {
+    background-color: #3ABA14;
+    color:white;
+}
+
 
 #doneButton, #deleteButton{
     font-family: 'Julius Sans One', sans-serif;
-  border:#FF4E2B solid 2px;
-    height:35px;
+  border: #3ABA14 solid 2px;
+    height:30px;
     width:100%;
     font-size: 1em;
+    outline:none;
     margin-bottom:8px;
      -webkit-animation: fadein 1s ease 0s forwards;
    animation: fadein 1s ease 0s forwards;
    animation-fill-mode: both !important;
    visibility: visible !important;
+       -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
     
 
 }
+#doneButton:hover{
+    color:white;
+    background-color: #3ABA14;
+    
+}
+#deleteButton{
+    font-family: 'Julius Sans One', sans-serif;
+  border:#FF4E2B solid 2px;
+    height:30px;
+    width:100%;
+    font-size: 1em;
+    margin-bottom:8px;
+    outline:none;
+     -webkit-animation: fadein 1s ease 0s forwards;
+   animation: fadein 1s ease 0s forwards;
+   animation-fill-mode: both !important;
+   visibility: visible !important;
+       -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
+    
+
+}
+#deleteButton:hover{
+    color:white;
+    background-color: #FF4E2B;
+}
+
 #deleteAllButton{
     font-family: 'Julius Sans One', sans-serif;
   border:#FF4E2B solid 2px;
     height:35px;
     width:15%;
     font-size: 1em;
-    margin-bottom:8px;
+    margin-bottom:20px;
+    margin-top:20px;
+    outline:none;
+    -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;
     
 
 }
-
-
-#input{
-    width:300px;
-    height:30px;
-    font-size: 0.9em;
+#deleteAllButton:hover{
+    color:white;
+    background-color: #FF4E2B;
+    height:45px;
+    width:20%;
+    font-size: 1.2em;
 }
+
 
 ul{
 
@@ -84,6 +140,7 @@ ul{
     padding:10px;
     margin-bottom:10px;
     font-size: 1.2em;
+    width:180px;
      text-align:center;
     list-style: none; 
     background-color:#2B2B2B;
