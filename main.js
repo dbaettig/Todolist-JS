@@ -48,6 +48,7 @@ function addList() {
 
     //raderar i ongoing
 deleteButton.addEventListener('click', deleteTodo);
+    
 function deleteTodo() {
     onGoing.removeChild(li);
     onGoing.removeChild(deleteButton);
