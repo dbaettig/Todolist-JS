@@ -1,2 +1,2 @@
-Todo
-Daniela Baettig
+#Todolist made with javascript
+
