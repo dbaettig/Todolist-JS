@@ -1,3 +1,3 @@
 Todolist made with javascript
 
-#https://dbaettig.github.io/Todolist-JS/
+[Github pages](https://dbaettig.github.io/Todolist-JS/)
