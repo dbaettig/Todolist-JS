@@ -14,11 +14,11 @@ input.addEventListener('keydown', function handleKeydown(e) {
         if (text !== '') {
             addList();
             input.value = ' ';
-        }else{
+        } else {
             alert('WRITE SOMETHING')
         }
     }
-      });
+});
 
 
 //lägger till en rad todo i att göra listan   
@@ -29,7 +29,7 @@ function addList() {
     li.id = "items";
     li.innerText = input.value;
     document.getElementById('onGoing').appendChild(li);
-      
+
     //lägger till doneknapp i onGoing
     var doneButton = document.createElement('button');
     const t = document.createTextNode("Done");
@@ -44,46 +44,44 @@ function addList() {
     deleteButton.appendChild(d);
     onGoing.appendChild(deleteButton);
     input.value = '';
-  
+
 
     //raderar i ongoing
-deleteButton.addEventListener('click', deleteTodo);
-    
-function deleteTodo() {
-    onGoing.removeChild(li);
-    onGoing.removeChild(deleteButton);
-    onGoing.removeChild(doneButton);
+    deleteButton.addEventListener('click', deleteTodo);
 
-}
+    function deleteTodo() {
+        onGoing.removeChild(li);
+        onGoing.removeChild(deleteButton);
+        onGoing.removeChild(doneButton);
 
-//flyttar raden från att göra listan till har gjort listan
-doneButton.addEventListener('click', moveToDone);
-    
-    function moveToDone(){
-    onGoing.removeChild(li);
-    onGoing.removeChild(doneButton);
-    onGoing.removeChild(deleteButton);
-    finished.appendChild(li);
-    finished.appendChild(deleteButton);
-}
+    }
+
+    //flyttar raden från att göra listan till har gjort listan
+    doneButton.addEventListener('click', moveToDone);
+
+    function moveToDone() {
+        onGoing.removeChild(li);
+        onGoing.removeChild(doneButton);
+        onGoing.removeChild(deleteButton);
+        finished.appendChild(li);
+        finished.appendChild(deleteButton);
+    }
 
     // raderar i donelistan och knappen när jag trycker på delete
     deleteButton.addEventListener('click', deleteDoneList);
-    
-    function deleteDoneList(){
+
+    function deleteDoneList() {
         finished.removeChild(li);
         finished.removeChild(deleteButton);
 
-} 
-    
-deleteAllButton.addEventListener('click', deleteAll)
-    
-    function deleteAll () {
-    onGoing.innerHTML = '';
-    finished.innerHTML = '';
+    }
 
-}
-    
-}// STÄNGER ADDLIST FUNKTIONEN
-        
+    deleteAllButton.addEventListener('click', deleteAll)
 
+    function deleteAll() {
+        onGoing.innerHTML = '';
+        finished.innerHTML = '';
+
+    }
+
+} // STÄNGER ADDLIST FUNKTIONEN
