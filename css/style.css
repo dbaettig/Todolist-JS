@@ -95,12 +95,14 @@ h2{
    visibility: visible !important;
        -webkit-transition-duration: 0.2s; 
     transition-duration: 0.2s;
+      margin-bottom:30px;
     
 
 }
 #deleteButton:hover{
     color:white;
     background-color: #FF4E2B;
+   
 }
 
 #deleteAllButton{
@@ -132,6 +134,7 @@ ul{
     -webkit-margin-after: 0em;
     -webkit-padding-start: 0px;
     text-decoration: none;
+   
 
 }
 
